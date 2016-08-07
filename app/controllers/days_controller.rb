@@ -8,13 +8,16 @@ class DaysController < ApplicationController
   end
 
   def new
+    @day = Day.new
   end
 
   def create
     @day = Day.new(day_params)
 
-    @day.save
+    if @day.save
     redirect_to @day
+  else
+    render 'new'
   end
 end
 
@@ -22,3 +25,4 @@ end
   def day_params
     params.require(:day).permit(:date, :total_calories)
   end
+end
