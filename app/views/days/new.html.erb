@@ -1,6 +1,6 @@
 <h1>New Day</h1>
 
-<%= form_for :day do |f| %>
+<%= form_for :day, url: days_path do |f| %>
 <p>
   <%= f.label :date %><br>
   <%= f.text_field :date %>
