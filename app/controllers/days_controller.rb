@@ -1,4 +1,8 @@
 class DaysController < ApplicationController
+  def index
+    @day = Day.all
+  end
+
   def show
     @day = Day.find(params[:id])
   end

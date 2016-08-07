@@ -1,0 +1,16 @@
+<h1>History</h1>
+
+<tabel>
+  <tr>
+    <th>Date</th>
+    <th>Total Calories</th>
+  </tr>
+
+  <% @day.each do |day| %>
+  <tr>
+    <td><%= day.date %></td>
+    <td><%= day.total_calories %></td>
+    <td><%= link_to 'Show', day_path(day) %></td>
+  </tr>
+  <% end %>
+</tabel>
