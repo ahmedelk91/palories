@@ -1,9 +1,11 @@
 <h1>History</h1>
 <%= link_to 'New day', new_day_path %>
-<tabel>
+
+<table>
   <tr>
     <th>Date</th>
     <th>Total Calories</th>
+    <th colspan="2"></th>
   </tr>
 
   <% @day.each do |day| %>
@@ -11,6 +13,7 @@
     <td><%= day.date %></td>
     <td><%= day.total_calories %></td>
     <td><%= link_to 'Show', day_path(day) %></td>
+    <td><%= link_to 'Edit', edit_day_path(day) %></td>
   </tr>
   <% end %>
-</tabel>
+</table>
