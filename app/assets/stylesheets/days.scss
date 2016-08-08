@@ -4,7 +4,7 @@
 
 #header {
   text-align: center;
-  font-family: Verdana;
+  font-family: externalFont;
   color: white;
   background-color: #99b3ff;
   height: 100px;
@@ -43,16 +43,59 @@
   color: white;
 }
 
+#green2 {
+  font-size: 10px;
+  line-height: 100px;
+  text-align: left;
+  height: 400px;
+  background-color: green;
+  color: white;
+}
+
+#green2 p {
+  font-size: 15px;
+}
+
+
+#yellow2 {
+  font-size: 10px;
+  line-height: 100px;
+  text-align: center;
+  height: 400px;
+  background-color: yellow;
+  color: black;
+}
+
+#red2 {
+  font-size: 25px;
+  line-height: 100px;
+  text-align: center;
+  height: 400px;
+  background-color: red;
+  color: white;
+}
+
 #display {
   margin:0 auto;
   text-align: center;
   height: 400px;
 }
 
-.btn {
-  color:white;
+.btn{
+  background-color: white;
+  color: white;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: light-blue;
 }
 
 #grand_total {
   font-size: 150px;
+}
+
+@font-face {
+  font-family: externalFont;
+  src: url(https://fonts.googleapis.com/css?family=Monoton);
 }

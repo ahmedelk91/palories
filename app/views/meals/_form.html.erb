@@ -1,21 +1,17 @@
 <%= form_for([@day, @day.meals.build]) do |f| %>
-<p>
-  <%= f.label :description %><br>
+
+  <%= f.label :description %>
   <%= f.text_field :description %>
-</p>
-<p>
-  <%= f.label :calories%><br>
+
+  <%= f.label :calories%>
   <%= f.text_field :calories%>
-</p>
-<p>
-  <%= f.label :serving_size%><br>
+
+  <%= f.label :serving_size%>
   <%= f.text_field :serving_size%>
-</p>
-<p>
-  <%= f.label :color%><br>
-  <%= f.select :color, [['Green', 'green'],['Yellow', 'yellow'],['Red', 'red']] %>
-</p>
-<p>
+
+  <%= f.label :color%>
+  <%= f.select :color, [['Green', 'Green'],['Yellow', 'Yellow'],['Red', 'Red']] %>
+
   <%= f.submit %>
-</p>
+
 <% end %>

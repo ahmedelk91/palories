@@ -12,6 +12,16 @@
 <%= render @day.meals %>
 
 <h2>Add a meal:</h2>
+<div class="col-sm-4" id="green2">
+  <h1>Green<h1>
+  <h3>Serving Size<h3>
+      <p>Tiny: 25 calories</p>
+      <p>Small: 50 calories</p>
+      <p>Medium: 100 calories</p>
+      <p>Large: 150 calories</p>
+</div>
+<div class="col-sm-4" id="yellow2"><h1>Yellow</h1></div>
+<div class="col-sm-4" id="red2"><h1>Red<h1></div>
 <%= render 'meals/form' %>
 
 <%= link_to 'Edit', edit_day_path(@day) %> |

@@ -1,6 +1,7 @@
 class DaysController < ApplicationController
   def index
-    @day = Day.all
+    @days = Day.all
+    @days.order!(created_at: :desc)
   end
 
   def show
@@ -44,6 +45,6 @@ class DaysController < ApplicationController
 
   private
   def day_params
-    params.require(:day).permit(:date, :total_calories)
+    params.require(:day).permit(:date, :total_calories, :day_id)
   end
 end

@@ -1,4 +1,8 @@
 class MealsController < ApplicationController
+  def new
+    @meal = Meal.new
+  end
+
   def create
     @day = Day.find(params[:day_id])
     @meal = @day.meals.create(meal_params)
