@@ -8,5 +8,48 @@
   <%= @day.total_calories %>
 </p>
 
+<h2>Meals</h2>
+<% @day.meals.each do |meal| %>
+<p>
+  <strong>Description:</strong>
+  <%= meal.description %>
+</p>
+<p>
+  <strong>Calories:</strong>
+  <%= meal.calories %>
+</p>
+<p>
+  <strong>Serving Size:</strong>
+  <%= meal.serving_size %>
+</p>
+<p>
+  <strong>Category:</strong>
+  <%= meal.color %>
+</p>
+<% end %>
+
+<h2>Add a meal:</h2>
+<%= form_for([@day, @day.meals.build]) do |f| %>
+<p>
+  <%= f.label :description %><br>
+  <%= f.text_field :description %>
+</p>
+<p>
+  <%= f.label :calories%><br>
+  <%= f.text_field :calories%>
+</p>
+<p>
+  <%= f.label :serving_size%><br>
+  <%= f.text_field :serving_size%>
+</p>
+<p>
+  <%= f.label :color%><br>
+  <%= f.select :color, [['Green', 'green'],['Yellow', 'yellow'],['Red', 'red']] %>
+</p>
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+
 <%= link_to 'Edit', edit_day_path(@day) %> |
 <%= link_to 'Back', days_path %>
