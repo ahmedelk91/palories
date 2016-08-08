@@ -7,31 +7,52 @@
   font-family: Verdana;
   color: white;
   background-color: #99b3ff;
-  height: 70px;
+  height: 100px;
   width: auto;
   margin: 0px;
 }
 
+.navbar{
+  text-align: center;
+}
+
 #green {
+  font-size: 25px;
+  line-height: 100px;
   text-align: center;
   height: 100px;
-  width: 24em;
   background-color: green;
   color: white;
 }
 
 #yellow {
+  font-size: 25px;
+  line-height: 100px;
   text-align: center;
   height: 100px;
-  width: 24em;
   background-color: yellow;
   color: black;
 }
 
 #red {
+  font-size: 25px;
+  line-height: 100px;
   text-align: center;
   height: 100px;
-  width: 24em;
   background-color: red;
   color: white;
+}
+
+#display {
+  margin:0 auto;
+  text-align: center;
+  height: 400px;
+}
+
+.btn {
+  color:white;
+}
+
+#grand_total {
+  font-size: 150px;
 }
