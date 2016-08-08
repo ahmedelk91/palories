@@ -1,7 +1,4 @@
 class MealsController < ApplicationController
-
-http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
-
   def create
     @day = Day.find(params[:day_id])
     @meal = @day.meals.create(meal_params)
