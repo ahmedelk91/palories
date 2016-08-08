@@ -5,6 +5,13 @@ class MealsController < ApplicationController
     redirect_to day_path(@day)
   end
 
+  def destroy
+    @day = Day.find(params[:day_id])
+    @meal = @day.meals.find(params[:id])
+    @meal.destroy
+    redirect_to day_path(@day)
+  end
+
   private
   def meal_params
     params.require(:meal).permit(:description, :calories, :serving_size, :color)

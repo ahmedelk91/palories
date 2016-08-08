@@ -14,3 +14,9 @@
   <strong>Category:</strong>
   <%= meal.color %>
 </p>
+
+<p>
+  <%= link_to 'Delete Meal', [meal.day, meal],
+  method: :delete,
+  data: { confirm: 'Are you sure?' } %>
+</p>
