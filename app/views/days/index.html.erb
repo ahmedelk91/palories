@@ -15,12 +15,11 @@
 </div>
 
 <div id="display">
-    <% @days.each do |day| %>
+  <% @days.each do |day| %>
       <h1>Date<a href="/days/new">(+)</a></h1>
       <h2><%= day.date %></h2>
       <h1>Total Calories<h1>
-      <h2 id="grand_total"><%= day.total_calories%></h2>
-
+      <h2 id="grand_total"> <%#= day.total_calories += day.meals.firstcalories %> </h2>
 <p>
     <button type="button" class="btn btn-primary"><%= link_to 'Show', day_path(day) %></button>
     <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_day_path(day) %></button>

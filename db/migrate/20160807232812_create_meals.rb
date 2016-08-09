@@ -5,6 +5,7 @@ class CreateMeals < ActiveRecord::Migration[5.0]
       t.integer :calories
       t.string :serving_size
       t.string :color
+      t.integer :total_calories
       t.references :day, foreign_key: true
 
       t.timestamps

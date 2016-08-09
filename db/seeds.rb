@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+user = User.first
+
+user.days.create!([
+
+  { date: '08/09/16' },
+
+  { date: '08/10/16' }
+
+])

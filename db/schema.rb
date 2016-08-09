@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160809153507) do
+ActiveRecord::Schema.define(version: 20160809190014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "days", force: :cascade do |t|
     t.string   "date"
-    t.integer  "total_calories"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.integer  "user_id"
+    t.integer  "total_calories"
     t.index ["user_id"], name: "index_days_on_user_id", using: :btree
   end
 

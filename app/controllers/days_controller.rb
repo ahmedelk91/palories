@@ -27,8 +27,8 @@ class DaysController < ApplicationController
   end
 
   def create
-    @day = Day.create!(post_params.merge(user: current_user))
-    redirect_to post_path(@day)
+    @day = Day.create!(day_params.merge(user: current_user))
+    redirect_to day_path(@day)
   end
 
   def update

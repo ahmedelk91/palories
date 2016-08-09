@@ -29,7 +29,7 @@ Current Issues:
 
 -dynamically update calories
 
--update forms to reflect new changes
+<!-- -update forms to reflect new changes -->
 
 -add user authentication
 
@@ -37,6 +37,6 @@ Current Issues:
 
 -add new font to title
 
--basic css styling 
+-basic css styling
 
 -** change the new day div to reflect category majority
