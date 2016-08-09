@@ -1,4 +1,13 @@
 <!-- <div class="navbar navbar-static-top"><h1>Palories</h1></div> -->
+<% if !current_user %>
+<%= link_to "Sign up", new_user_registration_path %>
+<%= link_to "Sign in", new_user_session_path %>
+<% else %>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+<%= current_user.email %>
+<% end %>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <div class="navbar navbar-static-top">
 <div class="col-sm-4" id="green">Palories</div>
 <div class="col-sm-4" id="yellow">Palories</div>

@@ -26,6 +26,11 @@ class DaysController < ApplicationController
     end
   end
 
+  def create
+    @day = Day.create!(post_params.merge(user: current_user))
+    redirect_to post_path(@day)
+  end
+
   def update
     @day = Day.find(params[:id])
 
@@ -42,6 +47,16 @@ class DaysController < ApplicationController
 
     redirect_to days_path
   end
+
+  def destroy
+  @day = Day.find(params[:id])
+  if @day.user == current_user
+    @day.destroy
+  else
+    flash[:alert] = "Only registered users can delete days"
+  end
+  redirect_to days_path
+end
 
   private
   def day_params
