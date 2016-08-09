@@ -24,3 +24,19 @@ Current Issues:
 - When I click the "+" next to a food category I want it to take me to the new meal form and NOT the new day form.
 
 - I want the calories on the index page to update dynamically, taking the totals of each category
+
+-------------------------------------STILL NEED TO WORK ON FOR TOMORROW---------------------------------------------
+
+-dynamically update calories
+
+-update forms to reflect new changes
+
+-add user authentication
+
+-create logic for assinging one color for a day
+
+-add new font to title
+
+-basic css styling 
+
+-** change the new day div to reflect category majority

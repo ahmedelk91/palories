@@ -3,14 +3,14 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
-  <%= f.label :calories%>
-  <%= f.text_field :calories%>
-
-  <%= f.label :serving_size%>
-  <%= f.text_field :serving_size%>
-
   <%= f.label :color%>
   <%= f.select :color, [['Green', 'Green'],['Yellow', 'Yellow'],['Red', 'Red']] %>
+
+  <%= f.label :serving_size%>
+  <%= f.select :serving_size, [['Tiny', 'Tiny'],['Small','Small'],['Medium','Medium'],['Large','Large'], ['Extra Large', 'Extra Large']]%>
+
+  <%= f.label :calories%>
+  <%= f.select :calories, [[25,25],[50,50],[100,100],[150,150],[200,200],[300,300],[600,600]]%>
 
   <%= f.submit %>
 
