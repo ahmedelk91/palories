@@ -1,16 +1,15 @@
 <p>
-  <strong>Date:</strong>
-  <%= @day.date %>
+  <h2>Date:</h2>
+  <h3><%= @day.date %></h3>
 </p>
-
 <p>
-  <strong>Total Calories:</strong>
-  <%= @day.total_calories += @meals.calories %>
+  <h3>Total Calories: <%= @day.total_day_calories%></h3>
+  <!-- <%#= @day.total_calories += @meal.calories%> -->
+  <!-- <%#= for meal(params[:id])
+  @meal = meal.id
+  @day.total_calories += @meal.calories
+  end%> -->
 </p>
-
-<h2>Meals</h2>
-<%= render @day.meals %>
-
 <h2>Add a meal:</h2>
 <div class="col-sm-4" id="green2">
   <h1>Green<h1>
@@ -46,21 +45,26 @@
           </div>
           <div class="col-sm-4" id="red2">
             <h1>Red<h1>
-            <h3>Serving Size<h3>
-              <p>Small: 50 calories</p>
-              <p>Medium: 150 calories</p>
-              <p>Large: 300 calories</p>
-              <p>Extra Large: 600 calories</p>
-              <h3>Examples<h3>
-                <ul class="bad">
-                  <li>Fried Foods</li>
-                  <li>Baked Goods/Pastries</li>
-                  <li>Candy</li>
-                  <li>Alcohol</li>
-                  <li>etc.</li>
-                </ul>
-              </div>
-              <%= render 'meals/form' %>
+              <h3>Serving Size<h3>
+                <p>Small: 50 calories</p>
+                <p>Medium: 150 calories</p>
+                <p>Large: 300 calories</p>
+                <p>Extra Large: 600 calories</p>
+                <h3>Examples<h3>
+                  <ul class="bad">
+                    <li>Fried Foods</li>
+                    <li>Baked Goods/Pastries</li>
+                    <li>Candy</li>
+                    <li>Alcohol</li>
+                    <li>etc.</li>
+                  </ul>
+                </div>
+                <%= render 'meals/form' %>
+<!-- <#%= @day = day(params[:id])%> -->
+
+<h2>Meals</h2>
+<%= render @day.meals %>
+
 
               <%= link_to 'Edit', edit_day_path(@day) %> |
               <%= link_to 'Back', days_path %>

@@ -18,24 +18,19 @@ As a user I would like to know which category I fall into for a particular day a
 
 As a user I would like to view my progress log so I can keep track of my calories.
 
-
-Current Issues:
-
-- When I click the "+" next to a food category I want it to take me to the new meal form and NOT the new day form.
-
 - I want the calories on the index page to update dynamically, taking the totals of each category
 
 -------------------------------------STILL NEED TO WORK ON FOR TOMORROW---------------------------------------------
 
--dynamically update calories
+<!-- -dynamically update calories -->
 
 <!-- -update forms to reflect new changes -->
 
--add user authentication
+<!-- -add user authentication -->
 
--create logic for assinging one color for a day
+-create logic for assigning one color for a day
 
--add new font to title
+<!-- -add new font to title -->
 
 -basic css styling
 
