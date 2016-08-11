@@ -14,8 +14,8 @@
 <div class="col-sm-4" id="red">Palories</div>
 </div>
 
-<div id="display">
   <% @days.each do |day| %>
+  <div id="display" class="color-<%= color(day).to_s.downcase %>">
       <h1>Date<a href="/days/new">(+)</a></h1>
       <h2><a href="<%= link_to "", day_path(day)%> <%= day.date %></a></h2>
       <h1>Total Calories<h1>

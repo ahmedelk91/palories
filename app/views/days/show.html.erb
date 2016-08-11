@@ -1,7 +1,4 @@
-<p>
-  <h2>Date:</h2>
-  <h3><%= @day.date %></h3>
-</p>
+<p> <h3>Date: <%= @day.date %></h3> </p>
 <p>
   <h3>Total Calories: <%= @day.total_day_calories%></h3>
   <!-- <%#= @day.total_calories += @meal.calories%> -->
@@ -11,6 +8,7 @@
   end%> -->
 </p>
 <h2>Add a meal:</h2>
+<%= render 'meals/form' %>
 <div class="col-sm-4" id="green2">
   <h1>Green<h1>
     <h3>Serving Size<h3>
@@ -59,12 +57,9 @@
                     <li>etc.</li>
                   </ul>
                 </div>
-                <%= render 'meals/form' %>
+                <%= link_to 'Edit', edit_day_path(@day) %> |
+                <%= link_to 'Back', days_path %>
 <!-- <#%= @day = day(params[:id])%> -->
 
 <h2>Meals</h2>
 <%= render @day.meals %>
-
-
-              <%= link_to 'Edit', edit_day_path(@day) %> |
-              <%= link_to 'Back', days_path %>

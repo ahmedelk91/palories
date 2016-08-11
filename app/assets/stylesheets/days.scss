@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.color-green {
+  background-color: green;
+}
+
+.color-yellow {
+  background-color: yellow;
+}
+
+.color-red {
+  background-color: red;
+}
+
 #header {
   text-align: center;
   font-family: externalFont;
@@ -47,6 +59,7 @@
 }
 
 #green2 {
+  // font-family: 'Galada', cursive;
   font-size: 10px;
   line-height: 100px;
   text-align: center;
@@ -70,6 +83,7 @@
 
 
 #yellow2 {
+  // font-family: 'Galada', cursive;
   font-size: 10px;
   line-height: 100px;
   text-align: center;
@@ -84,6 +98,7 @@
 }
 
 #red2 {
+  // font-family: 'Galada', cursive;
   font-size: 10px;
   line-height: 100px;
   text-align: center;

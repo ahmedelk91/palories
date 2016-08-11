@@ -28,10 +28,18 @@ As a user I would like to view my progress log so I can keep track of my calorie
 
 <!-- -add user authentication -->
 
+-rework user authentication
+<!--
 -create logic for assigning one color for a day
+
+    - If >50% calories green => Green div
+    - If >50% calories yellow => Yellow div
+    - If >50% calories red => Red div -->
 
 <!-- -add new font to title -->
 
 -basic css styling
 
--** change the new day div to reflect category majority
+<!-- -** change the new day div to reflect category majority -->
+
+-fix empty meal issue on day show page

@@ -16,11 +16,6 @@ class MealsController < ApplicationController
     redirect_to day_path(@day)
   end
 
-  def show
-    @day = Day.find(params[:id])
-    @meal = @day.meal.find(params[:id])
-  end
-
   private
   def meal_params
     params.require(:meal).permit(:description, :calories, :serving_size, :color)

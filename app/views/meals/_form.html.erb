@@ -10,10 +10,12 @@
   <%= f.select :serving_size, [['Tiny', 'Tiny'],['Small','Small'],['Medium','Medium'],['Large','Large'], ['Extra Large', 'Extra Large']]%>
 
   <%= f.label :calories%>
-  <%= f.select :calories, [[25,25],[50,50],[100,100],[150,150],[200,200],[300,300],[600,600]]%>
+  <%= f.text_field :calories %>
 
   <%= f.submit %>
 
 <% end %>
 
 <!-- @day.total_calories += @meal.calories  -->
+
+<!-- [[25,25],[50,50],[100,100],[150,150],[200,200],[300,300],[600,600]] -->
