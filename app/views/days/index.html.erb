@@ -10,14 +10,13 @@
 <p class="alert"><%= alert %></p>
 <div class="navbar navbar-static-top">
 <div class="col-sm-4" id="green">Palories</div>
-<div class="col-sm-4" id="yellow">Palories</div>
+<div class="col-sm-4" id="yellow">Palories<a href="/days/new">(+)</a></div>
 <div class="col-sm-4" id="red">Palories</div>
 </div>
 
   <% @days.each do |day| %>
-  <div id="display" class="color-<%= color(day).to_s.downcase %>">
-      <h1>Date<a href="/days/new">(+)</a></h1>
-      <h2><a href="<%= link_to "", day_path(day)%> <%= day.date %></a></h2>
+  <div id="display" class="color-<%= color(day).to_s.downcase %>"> <br>
+      <h1>Date: <a href="<%= link_to "", day_path(day)%> <%= day.date %></a></h1>
       <h1>Total Calories<h1>
       <h2 id="grand_total"> <%= day.total_day_calories %> </h2>
 <p>
