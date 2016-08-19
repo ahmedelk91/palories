@@ -15,6 +15,7 @@
 </div>
 
   <% @days.each do |day| %>
+  <!-- awesome feature implementation with the background color change -->
   <div id="display" class="color-<%= color(day).to_s.downcase %>"> <br>
       <h1>Date: <a href="<%= link_to "", day_path(day)%> <%= day.date %></a></h1>
       <h1>Total Calories<h1>

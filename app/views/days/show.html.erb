@@ -1,63 +1,67 @@
 <p> <h3 id="show_display">Date: <%= @day.date %> | Total Calories: <%= @day.total_day_calories%></h3> </p>
-  <!-- <%#= @day.total_calories += @meal.calories%> -->
-  <!-- <%#= for meal(params[:id])
-  @meal = meal.id
-  @day.total_calories += @meal.calories
-  end%> -->
+<!-- <%#= @day.total_calories += @meal.calories%> -->
+<!-- <%#= for meal(params[:id])
+@meal = meal.id
+@day.total_calories += @meal.calories
+end%> -->
+
+<!-- I'd remove any unused code and link back to the index view for days here -->
 </p>
 <h2 id="add_meal">Add a meal:</h2>
 <div class="meal_form"><%= render 'meals/form' %></div><br>
 <div class="col-sm-4" id="green2">
-  <h1>Green (great)<h1>
+  <!-- be careful to close your tags -->
+  <h1>Green (great)</h1>
+  <h3>Serving Size</h3>
+  <p>Tiny: 25 calories</p>
+  <p>Small: 50 calories</p>
+  <p>Medium: 100 calories</p>
+  <p>Large: 150 calories</p>
+  <h3>Examples<h3>
+    <ul class="healthy">
+      <li>Vegetables</li>
+      <li>Fruits</li>
+      <li>Whole Wheat Bread</li>
+      <li>Tofu</li>
+      <li>etc.</li>
+    </ul>
+  </div>
+  <div class="col-sm-4" id="yellow2">
+    <h1>Yellow (good)</h1>
     <h3>Serving Size<h3>
-      <p>Tiny: 25 calories</p>
       <p>Small: 50 calories</p>
       <p>Medium: 100 calories</p>
-      <p>Large: 150 calories</p>
+      <p>Large: 200 calories</p>
+      <p>Extra Large: 300 calories</p>
       <h3>Examples<h3>
-        <ul class="healthy">
-          <li>Vegetables</li>
-          <li>Fruits</li>
-          <li>Whole Wheat Bread</li>
-          <li>Tofu</li>
+        <ul class="good">
+          <li>Lean Protein (Chicken, Turkey)</li>
+          <li>Avacado</li>
+          <li>White Grains</li>
+          <li>Full Fat Cheese</li>
           <li>etc.</li>
         </ul>
       </div>
-      <div class="col-sm-4" id="yellow2">
-        <h1>Yellow (good)</h1>
-        <h3>Serving Size<h3>
-          <p>Small: 50 calories</p>
-          <p>Medium: 100 calories</p>
-          <p>Large: 200 calories</p>
-          <p>Extra Large: 300 calories</p>
-          <h3>Examples<h3>
-            <ul class="good">
-              <li>Lean Protein (Chicken, Turkey)</li>
-              <li>Avacado</li>
-              <li>White Grains</li>
-              <li>Full Fat Cheese</li>
-              <li>etc.</li>
-            </ul>
-          </div>
-          <div class="col-sm-4" id="red2">
-            <h1>Red (bad)<h1>
-              <h3>Serving Size<h3>
-                <p>Small: 50 calories</p>
-                <p>Medium: 150 calories</p>
-                <p>Large: 300 calories</p>
-                <p>Extra Large: 600 calories</p>
-                <h3>Examples<h3>
-                  <ul class="bad">
-                    <li>Fried Foods</li>
-                    <li>Baked Goods/Pastries</li>
-                    <li>Candy</li>
-                    <li>Alcohol</li>
-                    <li>etc.</li>
-                  </ul>
-                </div>
-                <%= link_to 'Edit', edit_day_path(@day) %> |
-                <%= link_to 'Back', days_path %>
-<!-- <#%= @day = day(params[:id])%> -->
+      <div class="col-sm-4" id="red2">
+        <h1>Red (bad)<h1>
+          <h3>Serving Size<h3>
+            <p>Small: 50 calories</p>
+            <p>Medium: 150 calories</p>
+            <p>Large: 300 calories</p>
+            <p>Extra Large: 600 calories</p>
+            <h3>Examples<h3>
+              <ul class="bad">
+                <li>Fried Foods</li>
+                <li>Baked Goods/Pastries</li>
+                <li>Candy</li>
+                <li>Alcohol</li>
+                <li>etc.</li>
+              </ul>
+            </div>
+            <%= link_to 'Edit', edit_day_path(@day) %> |
+            <%= link_to 'Back', days_path %>
+            <!-- <#%= @day = day(params[:id])%> -->
 
-<h2 id="ate_title">What you ate today:</h2>
-<div id="ate_today"><%= render @day.meals %></div>
+            <h2 id="ate_title">What you ate today:</h2>
+            <!-- great use of built in rails partials for models -->
+            <div id="ate_today"><%= render @day.meals %></div>
