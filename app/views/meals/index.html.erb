@@ -1,7 +1,9 @@
+<!-- close the div below  -->
 <div id="display">
   <% @meals.each do |meal| %>
   <h1>Meal<a href="/days/<%= day_id %>/meals"(+)</a></h1>
   <h2><a href="<%= link_to "", meal_path(meal)%><%= @meal.description %></a></h2>
   <h1>Total Calories<h1>
+    <!--  usage of helper method! -->
     <h2 id="grand_total"> <%#= @day.total_calories += @meals.calories %> </h2>
     <% end %>

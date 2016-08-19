@@ -2,6 +2,7 @@ class DaysController < ApplicationController
   def index
     @days = Day.all
     @days.order!(created_at: :desc)
+    # ordered by most recent, nice
   end
 
   def show
@@ -28,6 +29,7 @@ class DaysController < ApplicationController
 
   def create
     @day = Day.create!(day_params.merge(user: current_user))
+    # perfectly appropriate use of merge, especially considering that you are merging a user model with a nested resource model! you might want to consider adding some error handling for @day in case the user does something weird
     redirect_to day_path(@day)
   end
 
