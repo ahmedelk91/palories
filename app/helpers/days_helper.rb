@@ -9,6 +9,7 @@ module DaysHelper
 
     # Iterate over meals and sum the calories
     day.meals.each do |meal|
+      day.meals.each.all?
       if meal.color == "Green"
         green_calories += meal.calories
       elsif meal.color == "Yellow"
