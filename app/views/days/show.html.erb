@@ -58,6 +58,7 @@
                 <%= link_to 'Edit', edit_day_path(@day) %> |
                 <%= link_to 'Back', days_path %>
 <!-- <#%= @day = day(params[:id])%> -->
-
+<% if @meals.any? %>
 <h2 id="ate_title">What you ate today:</h2>
-<div id="ate_today"><%= render @day.meals %></div>
+<div id="ate_today"><%= render @meals %></div>
+<% end %>
