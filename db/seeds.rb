@@ -6,12 +6,15 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.first
+Day.destroy_all
+User.destroy_all
+
+user = User.create(email:"mail@email.com", password: "password")
 
 user.days.create!([
 
-  { date: '08/09/16' },
+  { date: '09/25/16' },
 
-  { date: '08/10/16' }
+  { date: '09/26/16' }
 
 ])
