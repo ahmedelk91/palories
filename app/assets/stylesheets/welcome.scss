@@ -1,3 +1,21 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-image: url(test.jpeg);
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Galada';
+}
+
+h1 {
+  // color: red;
+  text-decoration: none;
+  font-size: 100px;
+  text-align: center;
+}
+
+@font-face {
+  font-family: externalFont;
+  src: url(https://fonts.googleapis.com/css?family=Monoton);
+}

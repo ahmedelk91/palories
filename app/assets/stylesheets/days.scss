@@ -72,6 +72,10 @@
   color: black;
 }
 
+#yellow a {
+  color: black;
+}
+
 #red {
   font-family: 'Galada', cursive;
   font-size: 40px;
@@ -156,9 +160,9 @@
 }
 
 .btn{
+  text-decoration: none;
   background-color: white;
   color: white;
-  text-decoration: none;
 }
 
 .btn:hover {

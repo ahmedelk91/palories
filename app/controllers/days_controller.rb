@@ -58,7 +58,7 @@ class DaysController < ApplicationController
   redirect_to days_path
 end
 
-  private
+private
   def day_params
     params.require(:day).permit(:date, :day_id)
   end

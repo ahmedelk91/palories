@@ -4,7 +4,7 @@ class Day < ApplicationRecord
   validates :date, presence: true,
   length: { minimum: 5 }
 
-#helper method 
+#helper method
   def total_day_calories
     total_calories = 0
     day_meals = self.meals
