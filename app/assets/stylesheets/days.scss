@@ -1,11 +1,16 @@
 // Place all the styles related to the Days controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 #ate_title {
   font-family: 'Galada', cursive;
 }
 
 #ate_today {
+  width: 300px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 25px;
   font-family: Georgia;
   font-size: 20px;
 }
@@ -176,4 +181,22 @@
 @font-face {
   font-family: externalFont;
   src: url(https://fonts.googleapis.com/css?family=Monoton);
+}
+
+.center_text {
+  font-family: Georgia;
+  text-align: center;
+  font-size: 40px;
+}
+
+#login {
+  text-align: center;
+  font-size: 75px;
+}
+
+.btn {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: Verdana;
+  color: black;
 }

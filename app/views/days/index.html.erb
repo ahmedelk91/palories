@@ -9,25 +9,22 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 <div class="navbar navbar-static-top">
-<div class="col-sm-4" id="green">Palories</div>
-<div class="col-sm-4" id="yellow"><a href="/days/new">Add new day</a></div>
-<div class="col-sm-4" id="red">Palories</div>
+  <div class="col-sm-4" id="green">Palories</div>
+  <div class="col-sm-4" id="yellow"><a href="/days/new">Add new day</a></div>
+  <div class="col-sm-4" id="red">Palories</div>
 </div>
-<!-- <div class="new_day">
-  <a href="/days/new">Add new day</a>
-</div> -->
 
-  <% @days.each do |day| %>
-  <div id="display" class="color-<%= color(day).to_s.downcase %>"> <br>
-      <h1>Date: <a href="<%= link_to "", day_path(day)%> <%= day.date %></a></h1>
-      <h1>Total Calories<h1>
-      <h2 id="grand_total"> <%= day.total_day_calories %> </h2>
-<p>
-    <button type="button" class="btn btn-primary"><%= link_to 'View', day_path(day) %></button>
-    <button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_day_path(day) %></button>
-    <button type="button" class="btn btn-danger"><%= link_to 'Delete', day_path(day),
-      method: :delete,
-      data: { confirm: 'Are you sure?' } %></button>
-</p>
-    <% end %>
-</div>
+<% @days.each do |day| %>
+<div id="display" class="color-<%= color(day).to_s.downcase %>"> <br>
+  <h1>Date: <a href="<%= link_to "", day_path(day)%> <%= day.date %></a></h1>
+  <h1>Total Calories<h1>
+    <h2 id="grand_total"> <%= day.total_day_calories %> </h2>
+    <p>
+      <button type="button" class="btn btn-success"><%= link_to 'View', day_path(day) %></button>
+      <button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_day_path(day) %></button>
+      <button type="button" class="btn btn-danger" ><%= link_to 'Delete', day_path(day),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></button>
+      </p>
+      <% end %>
+    </div>

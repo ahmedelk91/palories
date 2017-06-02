@@ -1,14 +1,13 @@
 <p> <h3 id="show_display">Date: <%= @day.date %> | Total Calories: <%= @day.total_day_calories%></h3> </p>
-  <!-- <%#= @day.total_calories += @meal.calories%> -->
-  <!-- <%#= for meal(params[:id])
-  @meal = meal.id
-  @day.total_calories += @meal.calories
-  end%> -->
 </p>
 <h2 id="add_meal">Add a meal:</h2>
 <div class="meal_form"><%= render 'meals/form' %></div><br>
+
+<!-- ********************************************************************************************* -->
+<!-- CATEGORY DISPLAY -->
+<!-- ********************************************************************************************* -->
 <div class="col-sm-4" id="green2">
-  <h1>Green (great)<h1>
+  <h2>Great<h2>
     <h3>Serving Size<h3>
       <p>Tiny: 25 calories</p>
       <p>Small: 50 calories</p>
@@ -23,8 +22,9 @@
           <li>etc.</li>
         </ul>
       </div>
+
       <div class="col-sm-4" id="yellow2">
-        <h1>Yellow (good)</h1>
+        <h2>Good</h2>
         <h3>Serving Size<h3>
           <p>Small: 50 calories</p>
           <p>Medium: 100 calories</p>
@@ -39,8 +39,9 @@
               <li>etc.</li>
             </ul>
           </div>
+          
           <div class="col-sm-4" id="red2">
-            <h1>Red (bad)<h1>
+            <h2>Bad<h2>
               <h3>Serving Size<h3>
                 <p>Small: 50 calories</p>
                 <p>Medium: 150 calories</p>
@@ -55,9 +56,13 @@
                     <li>etc.</li>
                   </ul>
                 </div>
+                <!-- ********************************************************************************************* -->
+                <!-- CATEGORY DISPLAY -->
+                <!-- ********************************************************************************************* -->
+
                 <%= link_to 'Edit', edit_day_path(@day) %> |
                 <%= link_to 'Back', days_path %>
-<!-- <#%= @day = day(params[:id])%> -->
-
-<h2 id="ate_title">What you ate today:</h2>
-<div id="ate_today"><%= render @day.meals %></div>
+                <% if @meals.any? %>
+                <h2 id="ate_title">What you ate today:</h2>
+                <div id="ate_today"><%= render @meals %></div>
+                <% end %>

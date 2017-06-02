@@ -6,6 +6,7 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find(params[:id])
+    @meals = @day.meals.where.not(id: nil)
   end
 
   def edit

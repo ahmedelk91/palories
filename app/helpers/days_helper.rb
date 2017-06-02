@@ -1,11 +1,5 @@
 module DaysHelper
 
-  def datepicker_input form, field
-    content_tag :td, :data => {:provide => 'datepicker', 'date-format' => 'yyyy-mm-dd', 'date-autoclose' => 'true'} do
-      form.text_field field, class: 'form-control', placeholder: 'YYYY-MM-DD'
-    end
-  end
-  
   def color(day)
     colors = {}
 
@@ -16,6 +10,7 @@ module DaysHelper
 
     # Iterate over meals and sum the calories
     day.meals.each do |meal|
+      day.meals.each.all?
       if meal.color == "Green"
         green_calories += meal.calories
       elsif meal.color == "Yellow"
