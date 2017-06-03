@@ -14,3 +14,19 @@
 *= require_self
 *= require_tree .
 */
+
+#centerTextLogIn {
+  text-align: center;
+  font-size: 150px;
+  color: #337ab7;
+}
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.form-group {
+  font-size: 30px;
+  color: #337ab7;
+}
