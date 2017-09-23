@@ -20,7 +20,8 @@ A few problems persist with Palories in its current version:
 
 - I would prefer if the chart were more interactive and gave users the ability to click on an example item to preload the meal form.   
 
-*********************************************************************************************************************************Adding in for next week:
+*********************************************************************************************************************************
+Adding in for next week:
 
 - Fix Index Issue (user gets directed to Welcome page)
 - Sign in/up needs to be fixed
