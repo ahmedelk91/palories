@@ -78,8 +78,17 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
+# production:
+#   <<: *default
+#   database: palories_production
+#   username: palories
+#   password: <%= ENV['PALORIES_DATABASE_PASSWORD'] %>
+
+  production:
+  adapter: postgresql
+  encoding: unicode
   database: palories_production
   username: palories
-  password: <%= ENV['PALORIES_DATABASE_PASSWORD'] %>
+  password: palories
+  host: localhost
+  port: 5432
