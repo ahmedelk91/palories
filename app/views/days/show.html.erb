@@ -8,71 +8,78 @@
 <!-- ********************************************************************************************* -->
 
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="raw">
-  <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-    <div class="flipper">
-      <div class="front" id="green-front">
-        <p>Great</p>
-      </div>
-      <div class="back" id="green-back">
-        <h3>Serving Size<h3>
-          <p>Tiny: 25 calories</p>
-          <p>Small: 50 calories</p>
-          <p>Medium: 100 calories</p>
-          <p>Large: 150 calories</p>
-          <h3>Examples<h3>
-            <div class="healthy">
-              <p>Vegetables, Fruits, Whole Wheat Bread, Tofu, etc.</p>
+<div class="row">
+  <div class="col-md-4">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front" id="green-front">
+          <p>Great</p>
+        </div>
+        <div class="back" id="green-back">
+          <h3>Serving Size<h3>
+            <p>Tiny: 25 calories</p>
+            <p>Small: 50 calories</p>
+            <p>Medium: 100 calories</p>
+            <p>Large: 150 calories</p>
+            <h3>Examples<h3>
+              <div class="healthy">
+                <p>Vegetables, Fruits, Whole Wheat Bread, Tofu, etc.</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-        <div class="flipper">
-          <div class="front" id="yellow-front">
-            <p>Good</p>
-          </div>
-          <div class="back" id="yellow-back">
-            <h3>Serving Size<h3>
-              <p>Small: 50 calories</p>
-              <p>Medium: 100 calories</p>
-              <p>Large: 200 calories</p>
-              <p>Extra Large: 300 calories</p>
-              <h3>Examples<h3>
-                <ul class="good">
-                  <p>Lean Protein (Chicken, Turkey), Avacado, White Grains, Full Fat Cheese, etc.</p>
-                </ul>
+      <div class="col-md-4">
+        <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+          <div class="flipper">
+            <div class="front" id="yellow-front">
+              <p>Good</p>
+            </div>
+            <div class="back" id="yellow-back">
+              <h3>Serving Size<h3>
+                <p>Small: 50 calories</p>
+                <p>Medium: 100 calories</p>
+                <p>Large: 200 calories</p>
+                <p>Extra Large: 300 calories</p>
+                <h3>Examples<h3>
+                  <ul class="good">
+                    <p>Lean Protein (Chicken, Turkey), Avacado, White Grains, Full Fat Cheese, etc.</p>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
-            <div class="flipper">
-              <div class="front" id="red-front">
-                <p>Bad</p>
-              </div>
-              <div class="back" id="red-back">
-                <h3>Serving Size<h3>
-                  <p>Small: 50 calories</p>
-                  <p>Medium: 150 calories</p>
-                  <p>Large: 300 calories</p>
-                  <p>Extra Large: 600 calories</p>
-                  <h3>Examples<h3>
-                    <ul class="good">
-                      <p>Fried Food, Baked Goods/Pastries, Candy, Alcohol, etc.</p>
-                    </ul>
+          <div class="col-md-4">
+            <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+              <div class="flipper">
+                <div class="front" id="red-front">
+                  <p>Bad</p>
+                </div>
+                <div class="back" id="red-back">
+                  <h3>Serving Size<h3>
+                    <p>Small: 50 calories</p>
+                    <p>Medium: 150 calories</p>
+                    <p>Large: 300 calories</p>
+                    <p>Extra Large: 600 calories</p>
+                    <h3>Examples<h3>
+                      <ul class="good">
+                        <p>Fried Food, Baked Goods/Pastries, Candy, Alcohol, etc.</p>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- ********************************************************************************************* -->
-            <!-- CATEGORY DISPLAY -->
-            <!-- ********************************************************************************************* -->
-
-            <%= link_to 'Edit', edit_day_path(@day) %> |
-            <%= link_to 'Back', days_path %>
-            <% if @meals.any? %>
-            <h2 id="ate_title">What you ate today:</h2>
-            <div id="ate_today"><%= render @meals %></div>
-            <% end %>
+          </div>
+          <!-- </div> -->
+          <!-- ********************************************************************************************* -->
+          <!-- CATEGORY DISPLAY -->
+          <!-- ********************************************************************************************* -->
+          <%= link_to 'Edit', edit_day_path(@day) %> |
+          <%= link_to 'Back', days_path %>
+          <% if @meals.any? %>
+          <h2 id="ate_title">What you ate today:</h2>
+          <div id="ate_today"><%= render @meals %></div>
+          <% end %>
