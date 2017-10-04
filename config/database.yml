@@ -75,14 +75,14 @@ test:
 #
 # You can use this database configuration with:
 #
-#   production:
-#     url: <%= ENV['DATABASE_URL'] %>
-#
-# production:
-#   <<: *default
-#   database: palories_production
-#   username: palories
-#   password: <%= ENV['PALORIES_DATABASE_PASSWORD'] %>
+  production:
+    url: <%= ENV['DATABASE_URL'] %>
+
+production:
+  <<: *default
+  database: palories_production
+  username: palories
+  password: <%= ENV['PALORIES_DATABASE_PASSWORD'] %>
 
   production:
   adapter: postgresql
